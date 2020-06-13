@@ -1,0 +1,14 @@
+/* Helpers */
+
+.heigth-100vh{
+    height: 100vh;
+}
+
+.root {
+    background-color: #3D7B6C;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
