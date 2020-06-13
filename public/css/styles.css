@@ -27,3 +27,11 @@
     color: #17483C;
     box-shadow: 3px 3px #17483C;
 }
+
+.register-link {
+    color: #17483C;
+}
+
+.register-link:hover{
+    color: #2FC09D;
+}

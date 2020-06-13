@@ -10,7 +10,7 @@ export default function LoginForm() {
   return (
     <div className="container">
       <div className="text-center">
-        <h3>Faça seu Login!</h3>
+        <h3>Faça Seu Login!</h3>
         <p>
           Entre em nosso sistema para ter acesso as informações de interesse!
         </p>
@@ -40,7 +40,7 @@ export default function LoginForm() {
               className="form-control"
               id="password"
               name="password"
-              placeholder="Insira a senha"
+              placeholder="Insira sua senha"
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
@@ -54,6 +54,9 @@ export default function LoginForm() {
             >
               Entrar
             </button>
+          </div>
+          <div className="mt-3 text-center">
+              <p>Não possui uma conta? <a className="register-link" href="#">cadastre-se aqui.</a> </p>
           </div>
         </div>
       </form>
