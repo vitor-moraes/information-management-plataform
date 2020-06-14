@@ -1,4 +1,7 @@
 /* Helpers */
+body {
+    background-color: #3D7B6C;
+}
 
 .heigth-100vh{
     height: 100vh;
