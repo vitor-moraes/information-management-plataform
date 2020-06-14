@@ -35,3 +35,11 @@
 .register-link:hover{
     color: #2FC09D;
 }
+
+.registration-header {
+    margin-left: 100px;
+}
+.registration-body {
+    margin-top: 10px;
+    background-color: lightgray;
+}

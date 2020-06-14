@@ -16,49 +16,54 @@ export default function LoginForm() {
         </p>
       </div>
       <form>
-        <div className="form-group mt-5">
-          <div className="mt-3">
-            <label htmlFor="login">CPF / E-mail</label>
-            <input
-              type="text"
-              required
-              className="form-control"
-              id="login"
-              name="login"
-              placeholder="Insira seu CPF ou E-mail"
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-            />
-          </div>
+          <div className="form-group mt-5">
+            <div className="mt-3">
+              <label htmlFor="login">CPF / E-mail</label>
+              <input
+                type="text"
+                required
+                className="form-control"
+                id="login"
+                name="login"
+                placeholder="Insira seu CPF ou E-mail"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+              />
+            </div>
 
-          <div className="mt-3">
-            <label htmlFor="password">Senha</label>
-            <input
-              type="password"
-              required
-              className="form-control"
-              id="password"
-              name="password"
-              placeholder="Insira sua senha"
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
+            <div className="mt-3">
+              <label htmlFor="password">Senha</label>
+              <input
+                type="password"
+                required
+                className="form-control"
+                id="password"
+                name="password"
+                placeholder="Insira sua senha"
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
+              />
+            </div>
+            <div className="mx-auto text-center" style={{ maxWidth: 200 }}>
+              <button
+                type="button"
+                onClick={handleSubmit}
+                className="btn btn-custom waves-btn waves-effect mt-3"
+              >
+                Entrar
+              </button>
+            </div>
+            <div className="mt-3 text-center">
+              <p>
+                Não possui uma conta?{" "}
+                <a className="register-link" href="/cadastro">
+                  cadastre-se aqui.
+                </a>{" "}
+              </p>
+            </div>
           </div>
-          <div className="mx-auto text-center" style={{ maxWidth: 200 }}>
-            <button
-              type="button"
-              onClick={handleSubmit}
-              className="btn btn-custom waves-btn waves-effect mt-3"
-            >
-              Entrar
-            </button>
-          </div>
-          <div className="mt-3 text-center">
-              <p>Não possui uma conta? <a className="register-link" href="#">cadastre-se aqui.</a> </p>
-          </div>
-        </div>
       </form>
     </div>
   );
