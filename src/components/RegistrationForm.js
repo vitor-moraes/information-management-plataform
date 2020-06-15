@@ -117,10 +117,11 @@ export default function RegistrationPage() {
                 type="file"
                 required
                 className="form-control form-layout"
+                accept=".jpg"
                 id="file"
                 name="file"
                 onChange={(e) => {
-                  setPassword(e.target.value);
+                  setFile(e.target.files[0]);
                 }}
               />
             </div>
