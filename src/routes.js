@@ -3,9 +3,11 @@ import ReactDOM from "react-dom";
 
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import { isAuthenticated } from "./services/auth";
+
+import HomePage from "./pages/HomePage";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -25,6 +27,7 @@ const Routes = () => (
     <Switch>
       <Route path={`${process.env.PUBLIC_URL}/`} component={HomePage} exact />
       <Route path={`${process.env.PUBLIC_URL}/home`} component={HomePage} />
+      <Route path={`${process.env.PUBLIC_URL}/login`} component={LoginPage} />
       <Route
         path={`${process.env.PUBLIC_URL}/cadastro`}
         component={RegistrationPage}

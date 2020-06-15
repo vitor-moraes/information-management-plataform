@@ -24,8 +24,8 @@ class UserController {
   }
 
   async login({ request, response, auth }) {
-    const data = request.only([/*'cpf',*/ "email", "password"]); // let the user choose between email and cpf to use as login
-    const token = await auth.attempt(/*data.cpf,*/ data.email, data.password);
+    const data = request.only(["email", "password"]); // let the user choose between email and cpf to use as login
+    const token = await auth.attempt(data.email, data.password);
     return response.json(token);
   }
 
@@ -36,6 +36,10 @@ class UserController {
 
   async get({ response, params }) {
     const resp = await User.find(params.id);
+    return response.json(resp);
+  }
+  async getByEmail({ response, params }) {
+    const resp = await User.findBy("email", params.email);
     return response.json(resp);
   }
 

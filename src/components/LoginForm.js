@@ -10,13 +10,12 @@ export default function LoginForm() {
 
   const handleSubmit = async () => {
     try {
-      const response = await applicationCache.post(
-        "./user/login",
-        email,
-        password
-      );
+      const response = await api.post("/users/login", { email, password });
       console.log(response);
-      login(response);
+      login(response.data.token);
+      const dataUser = await api.get("users/getByEmail/" + email);
+      localStorage.setItem("acesso", dataUser.data.access);
+      window.location.href = "/home";
     } catch (error) {
       console.log(error);
     }
