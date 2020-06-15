@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { isAuthenticated } from "../services/auth";
-import AdminUser from "../components/AdminUser";
+
+import StandardDashboard from "./StandardDashboard";
+import AdminDashboard from "./AdminDashboard";
+import DisabledUser from "./DisabledUser";
 
 export default function HomePage() {
   useEffect(() => {
@@ -11,9 +14,9 @@ export default function HomePage() {
   }, []);
   return (
     <div>
-      {localStorage.getItem("acesso") === "1" && <h1>Comum</h1>}
-      {localStorage.getItem("acesso") === "999" && <AdminUser />}
-      {localStorage.getItem("acesso") === "0" && <h1>Desativado</h1>}
+      {localStorage.getItem("acesso") === "1" && <StandardDashboard />}
+      {localStorage.getItem("acesso") === "999" && <AdminDashboard />}
+      {localStorage.getItem("acesso") === "0" && <DisabledUser />}
     </div>
   );
 }

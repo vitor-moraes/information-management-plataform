@@ -1,48 +1,81 @@
 /* Helpers */
 body {
-    background-color: #3D7B6C;
+  background-color: #3d7b6c;
 }
 
-.heigth-100vh{
-    height: 100vh;
+.heigth-100vh {
+  height: 100vh;
 }
 
 .root {
-    background-color: #3D7B6C;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  background-color: #3d7b6c;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.btn-custom{
-    border: 1px solid #17483C;
-    background-color: #17483C;
-    color: #f2f5f7;
-    width: 180px;
-    transition: all 0.5s;
-    font-weight: bold;
+.btn-custom {
+  border: 1px solid #17483c;
+  background-color: #17483c;
+  color: #f2f5f7;
+  width: 180px;
+  transition: all 0.5s;
+  font-weight: bold;
 }
 
-.btn-custom:hover{
-    background-color: #f2f5f7;
-    color: #17483C;
-    box-shadow: 3px 3px #17483C;
+.btn-custom:hover {
+  background-color: #f2f5f7;
+  color: #17483c;
+  box-shadow: 3px 3px #17483c;
 }
 
 .register-link {
-    color: #17483C;
+  color: #17483c;
 }
 
-.register-link:hover{
-    color: #2FC09D;
+.register-link:hover {
+  color: #2fc09d;
 }
 
 .registration-header {
-    margin-left: 100px;
+  margin-left: 100px;
 }
 .registration-body {
-    margin-top: 10px;
-    background-color: lightgray;
+  margin-top: 10px;
+  background-color: lightgray;
+}
+
+.image-user {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.user-info {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.btn-admin-custom {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  border: 1px solid #17483c;
+  background-color: #17483c;
+  color: #f2f5f7;
+  width: 180px;
+  transition: all 0.5s;
+  font-weight: bold;
+}
+
+.btn-admin-custom:hover {
+  background-color: #f2f5f7;
+  color: #17483c;
+  box-shadow: 3px 3px #17483c;
+}
+
+.centralize {
+  margin-top: 1000px;
+  height: 100%;
+  margin: auto;
 }

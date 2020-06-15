@@ -71,10 +71,10 @@ export default function LoginForm() {
           </div>
           <div className="mt-3 text-center">
             <p>
-              Não possui uma conta?{" "}
+              Não possui uma conta?
               <a className="register-link" href="/cadastro">
                 cadastre-se aqui.
-              </a>{" "}
+              </a>
             </p>
           </div>
         </div>
