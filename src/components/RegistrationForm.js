@@ -33,14 +33,12 @@ export default function RegistrationPage() {
 
   return (
     // Registration Header (this can be transform into a component)
-    <div>
-      <div className="card mt-5">
-        <div className="card-body">
-          <div classname="registration-header">
-            <div classname="text-center">
-              <h3>Cadastre-se abaixo!</h3>
-              <p>Não demora nem um minuto!</p>
-            </div>
+    <div className="container">
+      <div className="card">
+        <div classname="row">
+          <div className="registration-header">
+            <h3>Cadastre-se abaixo!</h3>
+            <p>Não demora nem um minuto ;)</p>
           </div>
         </div>
 
@@ -48,12 +46,14 @@ export default function RegistrationPage() {
         <form onSubmit={handleSubmit} encType="multipart/form-data">
           <div className="container registration-body">
             <div className="form-group mt-5">
-              <label htmlFor="name">Nome Completo</label>
+              <label className="form-names-layout" htmlFor="name">
+                Nome Completo
+              </label>
               {/* Full name's input */}
               <input
                 type="name"
                 required
-                className="form-control"
+                className="form-control form-layout"
                 id="name"
                 name="name"
                 placeholder="Insira seu nome completo"
@@ -62,14 +62,16 @@ export default function RegistrationPage() {
                 }}
               />
               {/* CPF's input */}
-              <label htmlFor="cpf">CPF</label>
+              <label className="form-names-layout" htmlFor="cpf">
+                CPF
+              </label>
               <InputMask
                 type="text"
                 name="cpf"
                 mask="999.999.999-99"
                 pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
                 required
-                className="form-control"
+                className="form-control form-layout"
                 id="cpf"
                 name="cpf"
                 placeholder="xxx.xxx.xxx-xx"
@@ -78,11 +80,13 @@ export default function RegistrationPage() {
                 }}
               />
               {/* E-mail's imput */}
-              <label htmlFor="email">E-mail</label>
+              <label className="form-names-layout" htmlFor="email">
+                E-mail
+              </label>
               <input
                 type="email"
                 required
-                className="form-control"
+                className="form-control form-layout"
                 id="email"
                 name="email"
                 placeholder="Insira seu e-mail"
@@ -91,11 +95,13 @@ export default function RegistrationPage() {
                 }}
               />
               {/* Password's input */}
-              <label htmlFor="password">Senha</label>
+              <label className="form-names-layout" htmlFor="password">
+                Senha
+              </label>
               <input
                 type="password"
                 required
-                className="form-control"
+                className="form-control form-layout"
                 id="password"
                 name="password"
                 placeholder="Insira a sua senha"
@@ -104,11 +110,13 @@ export default function RegistrationPage() {
                 }}
               />
               {/* add picture requisitation place */}
-              <label htmlFor="file">Foto de perfil</label>
+              <label className="form-names-layout" htmlFor="file">
+                Foto de perfil
+              </label>
               <input
                 type="file"
                 required
-                className="form-control"
+                className="form-control form-layout"
                 id="file"
                 name="file"
                 onChange={(e) => {
@@ -128,13 +136,11 @@ export default function RegistrationPage() {
                 Entrar
               </button>
             </div>
-            <div
-              className="col-12 col-md-6 text-center"
-              style={{ maxWidth: 200 }}
-            >
+            {/* Button to go back */}
+            <div className="back-button" style={{ maxWidth: 200 }}>
               <a
                 className="btn btn-custom waves-btn waves-effect mt-3"
-                href="/home"
+                href="/login"
               >
                 Voltar
               </a>

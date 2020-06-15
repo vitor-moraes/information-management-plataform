@@ -1,6 +1,6 @@
 /* Helpers */
 body {
-  background-color: #3d7b6c;
+  background-color: #333333;
 }
 
 .heigth-100vh {
@@ -8,7 +8,7 @@ body {
 }
 
 .root {
-  background-color: #3d7b6c;
+  background-color: #333333;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -17,8 +17,8 @@ body {
 }
 
 .btn-custom {
-  border: 1px solid #17483c;
-  background-color: #17483c;
+  border: 1px solid #ff2837;
+  background-color: #ff2837;
   color: #f2f5f7;
   width: 180px;
   transition: all 0.5s;
@@ -26,30 +26,50 @@ body {
 }
 
 .btn-custom:hover {
-  background-color: #f2f5f7;
-  color: #17483c;
-  box-shadow: 3px 3px #17483c;
+  background-color: #333333;
+  color: #f2f5f7;
+  box-shadow: 3px 3px #ff2837;
 }
 
 .register-link {
-  color: #17483c;
+  color: #ff2837;
 }
 
 .register-link:hover {
-  color: #2fc09d;
+  color: #333333;
 }
 
 .registration-header {
-  margin-left: 100px;
+  margin-top: 50px;
+  text-align: center;
+  background-color: rgba(211, 211, 211, 0.712) 211, 211, 0.795);
 }
 .registration-body {
   margin-top: 10px;
   background-color: lightgray;
 }
 
+.form-layout{
+  text-align: left;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  height: 45px;
+}
+
+.form-names-layout{
+  text-align: left;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
 .image-user {
   margin-left: 10px;
   margin-top: 10px;
+}
+
+.back-button {
+  margin-left: 153px;
+  text-align: center;
 }
 
 .user-info {
@@ -58,10 +78,10 @@ body {
 }
 
 .btn-admin-custom {
-  margin-top: 40px;
+  margin-top: 35px;
   margin-bottom: 10px;
-  border: 1px solid #17483c;
-  background-color: #17483c;
+  border: 1px solid #ff2837;
+  background-color: #333333;
   color: #f2f5f7;
   width: 180px;
   transition: all 0.5s;
@@ -69,13 +89,19 @@ body {
 }
 
 .btn-admin-custom:hover {
-  background-color: #f2f5f7;
-  color: #17483c;
-  box-shadow: 3px 3px #17483c;
+  background-color: #333333;
+  color: #f2f5f7;
+  box-shadow: 3px 3px #ff2837;
 }
 
 .centralize {
   margin-top: 1000px;
   height: 100%;
   margin: auto;
+}
+
+.back-admin-button{
+  position: absolute;
+  margin-bottom: 30px;
+  margin-left: 575px;
 }
