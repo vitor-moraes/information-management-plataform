@@ -43,6 +43,10 @@ class UserController {
     return response.json(resp);
   }
 
+  async deleteUser({ params }) {
+    User.delete(params.id);
+  }
+
   async edit({ request, response, params }) {
     let data = request.all();
     const image = request.file("fileImage", {

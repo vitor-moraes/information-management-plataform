@@ -8,6 +8,7 @@ Route.group(() => {
   Route.post("login", "UserController.login");
   Route.get("getAll", "UserController.getAll");
   Route.get("get/:id", "UserController.get");
+  Route.get("deleteUser/:id", "UserController.deleteUser");
   Route.post("edit/:id", "UserController.edit");
   Route.get("getByEmail/:email", "UserController.getByEmail");
 }).prefix("users");
