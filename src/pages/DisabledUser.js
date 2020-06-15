@@ -5,11 +5,12 @@ export default function DisabledUser() {
     window.document.title = "DESATIVADA";
   }, []);
   return (
-    <div className="container mt-5">
+    <div className="container col-12 mt-5">
       <div className="card centralize">
-        <div className="row centralize">
-          <h2>Esta conta está desativada</h2>
+        <div className="row centralize mt-4" style={{ height: 80 }}>
+          <h3 className="disable-mensage">Esta conta está desativada</h3>
         </div>
+        <div className="horizontal-line-shorter"></div>
       </div>
     </div>
   );

@@ -63,124 +63,143 @@ export default function StandardUser() {
       {userData !== null ? (
         <div>
           <div className="container">
-            <div className="card mt-2">
-              <div className="row">
-                <div className="col-sm-4">
-                  <img
-                    className="image-user"
-                    src={userData.img_path}
-                    width="150"
-                    alt="profileImage"
-                  ></img>
+            <div className="card mt-5 mx-auto shadow">
+              <div className="card-body">
+                <div className="row">
+                  <div className="col-md-5 col-12 mx-auto">
+                    <div>
+                      <img
+                        className="image-user"
+                        src={userData.img_path}
+                        width="150"
+                        alt="profileImage"
+                      ></img>
+                    </div>
+                    <div className="info-comum">
+                      <p className="user-info">
+                        <strong>Nome: </strong>
+                        {userData.name}
+                      </p>
+                      <p className="user-info">
+                        <strong>CPF: </strong>
+                        {userData.cpf}
+                      </p>
+                      <p className="user-info">
+                        <strong>E-mail: </strong>
+                        {userData.email}
+                      </p>
+                      <p className="user-info">
+                        <strong>Acesso: </strong>
+                        {userData.access === 999 && "Admin"}
+                        {userData.access === 1 && "Comum"}
+                        {userData.access === 0 && "DESATIVADO"}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="vertical-line" />
+                  <div className="text-center col-md-5">
+                    <img
+                      src="/images/Logo-Mind.png"
+                      className="montain-bear-logo"
+                      style={{ width: 150 }}
+                    />
+                    <h3 className="logo-big">Edite suas informações!</h3>
+                    <p className="logo-small">
+                      Faça as alterações que desejar no seu cadastro abaixo ;)
+                    </p>
+                  </div>
+                  <div className="col-md-5 col-12"></div>
                 </div>
-                <div className="col-sm-4">
-                  <p className="user-info">
-                    <strong>Nome: </strong>
-                    {userData.name}
-                  </p>
-                  <p className="user-info">
-                    <strong>CPF: </strong>
-                    {userData.cpf}
-                  </p>
-                  <p className="user-info">
-                    <strong>E-mail: </strong>
-                    {userData.email}
-                  </p>
-                  <p className="user-info">
-                    <strong>Acesso: </strong>
-                    {userData.access === 999 && "Admin"}
-                    {userData.access === 1 && "Comum"}
-                    {userData.access === 0 && "DESATIVADO"}
-                  </p>
-                </div>
-                <div className="col-sm-4"></div>
-              </div>
-              {/*  */}
-              {/* Formulário */}
-              {/*  */}
-              <form onSubmit={editUser} encType="multipart/form-data">
-                <div className="container registration-body">
-                  <div className="form-group mt-5">
-                    <label className="form-names-layout" htmlFor="name">
-                      Nome Completo
-                    </label>
-                    {/* Full name's input */}
-                    <input
-                      type="name"
-                      required
-                      className="form-control form-layout"
-                      id="name"
-                      name="name"
-                      defaultValue={userData.name}
-                      placeholder="Insira seu nome completo"
-                      onChange={(e) => {
-                        setName(e.target.value);
-                      }}
-                    />
-                    {/* CPF's input */}
-                    <label className="form-names-layout" htmlFor="cpf">
-                      CPF
-                    </label>
-                    <InputMask
-                      type="text"
-                      name="cpf"
-                      mask="999.999.999-99"
-                      pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-                      // value={userData.cpf}
-                      className="form-control form-layout"
-                      id="cpf"
-                      name="cpf"
-                      placeholder="xxx.xxx.xxx-xx"
-                      onChange={(e) => {
-                        setCpf(e.target.value);
-                      }}
-                    />
-                    {/* E-mail's imput */}
-                    <label className="form-names-layout" htmlFor="email">
-                      E-mail
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      defaultValue={userData.email}
-                      className="form-control form-layout"
-                      id="email"
-                      name="email"
-                      placeholder="Insira seu e-mail"
-                      onChange={(e) => {
-                        setEmail(e.target.value);
-                      }}
-                    />
+                <div className="horizontal-line-taller" />
+                {/*  */}
+                {/* Formulário */}
+                {/*  */}
+                <div>
+                  <form onSubmit={editUser} encType="multipart/form-data">
+                    <div className="container registration-body">
+                      <div className="form-group">
+                        <label className="form-names-layout" htmlFor="name">
+                          Nome Completo
+                        </label>
+                        {/* Full name's input */}
+                        <input
+                          type="name"
+                          required
+                          className="form-control form-layout"
+                          id="name"
+                          name="name"
+                          defaultValue={userData.name}
+                          placeholder="Insira seu nome completo"
+                          onChange={(e) => {
+                            setName(e.target.value);
+                          }}
+                        />
+                        {/* CPF's input */}
+                        <label className="form-names-layout" htmlFor="cpf">
+                          CPF
+                        </label>
+                        <InputMask
+                          type="text"
+                          name="cpf"
+                          mask="999.999.999-99"
+                          pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                          // value={userData.cpf}
+                          className="form-control form-layout"
+                          id="cpf"
+                          name="cpf"
+                          placeholder="xxx.xxx.xxx-xx"
+                          onChange={(e) => {
+                            setCpf(e.target.value);
+                          }}
+                        />
+                        {/* E-mail's imput */}
+                        <label className="form-names-layout" htmlFor="email">
+                          E-mail
+                        </label>
+                        <input
+                          type="email"
+                          required
+                          defaultValue={userData.email}
+                          className="form-control form-layout"
+                          id="email"
+                          name="email"
+                          placeholder="Insira seu e-mail"
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                          }}
+                        />
 
-                    {/* add picture requisitation place */}
-                    <label className="form-names-layout" htmlFor="file">
-                      Foto de perfil
-                    </label>
-                    <input
-                      type="file"
-                      className="form-control form-layout"
-                      accept=".jpg"
-                      id="file"
-                      name="file"
-                      onChange={(e) => {
-                        setFile(e.target.files[0]);
-                      }}
-                    />
-                  </div>
-                  {/* Button to register*/}
-                  <div
-                    className="mx-auto col-12 col-md-6 text-center"
-                    style={{ maxWidth: 200 }}
-                  >
-                    <button
-                      className="btn btn-custom waves-btn waves-effect mt-3"
-                      type="submit"
-                    >
-                      Editar
-                    </button>
-                  </div>
+                        {/* add picture requisitation place */}
+                        <label className="form-names-layout" htmlFor="file">
+                          Foto de perfil
+                        </label>
+                        <input
+                          type="file"
+                          className="form-control form-layout"
+                          accept=".jpg"
+                          id="file"
+                          name="file"
+                          onChange={(e) => {
+                            setFile(e.target.files[0]);
+                          }}
+                        />
+                      </div>
+                      {/* Button to register*/}
+                      <div
+                        className="mx-auto col-12 col-md-6 text-center"
+                        style={{ maxWidth: 200 }}
+                      >
+                        <button
+                          className="user-edit-btn btn btn-custom waves-btn waves-effect"
+                          type="submit"
+                        >
+                          Editar
+                        </button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>

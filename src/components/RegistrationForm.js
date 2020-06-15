@@ -122,7 +122,7 @@ export default function RegistrationPage() {
             style={{ maxWidth: 200 }}
           >
             <button
-              className="btn-registrarion btn-custom waves-btn waves-effect mt-3"
+              className="btn btn-custom btn-registrarion waves-btn waves-effect mt-3"
               type="submit"
             >
               Cadastrar-se

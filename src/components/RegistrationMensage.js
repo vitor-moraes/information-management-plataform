@@ -9,7 +9,7 @@ export default function RegistrationMensage() {
         style={{ width: 150 }}
       />
       <div className="registration-header">
-        <h3 className="text-danger">Cadastre-se abaixo!</h3>
+        <h3 className="text-danger">Cadastre-se ao lado!</h3>
         <p>Não demora nem um minuto ;)</p>
       </div>
     </>

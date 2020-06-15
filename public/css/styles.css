@@ -87,6 +87,28 @@ body {
   border: 1px #bbb solid;
   margin: 30px 10px;
 }
+.horizontal-line-taller {
+  margin-right: 30px;
+  display: flex;
+  width: 1030px;
+  height: 1px;
+  border: 1px #ff2837 solid;
+  margin: 35px 20px;
+  margin-right: 30px;
+}
+.horizontal-line-shorter {
+  display: flex;
+  width: 400px;
+  height: 1px;
+  border: 1px #ff2837 solid;
+  margin-top: 1px;
+  margin-left: 465px;
+  margin-bottom: 50px;
+}
+.disable-mensage {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
 
 .form-layout {
   text-align: left;
@@ -108,9 +130,26 @@ body {
   margin-bottom: 1px;
 }
 
+.info-comum {
+  margin-bottom: 10px;
+  margin-top: 22px;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #333333;
+}
+
+.user-edit-btn {
+  margin-left: 0px;
+}
+
 .image-user {
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 135px;
+  margin-top: 40px;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #333333;
 }
 
 .back-button {
