@@ -32,123 +32,104 @@ export default function RegistrationPage() {
   };
 
   return (
-    // Registration Header (this can be transform into a component)
-    <div className="container">
-      <div className="card">
-        <div classname="row">
-          <div className="registration-header">
-            <h3 className="text-danger">Cadastre-se abaixo!</h3>
-            <p>Não demora nem um minuto ;)</p>
+    <>
+      {/* User information form */}
+      <form onSubmit={handleSubmit} encType="multipart/form-data">
+        <div className="container registration-body">
+          <div className="form-group">
+            <label className="form-names-layout" htmlFor="name">
+              Nome Completo
+            </label>
+            {/* Full name's input */}
+            <input
+              type="name"
+              required
+              className="form-control form-layout"
+              id="name"
+              name="name"
+              placeholder="Insira seu nome completo"
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+            />
+            {/* CPF's input */}
+            <label className="form-names-layout" htmlFor="cpf">
+              CPF
+            </label>
+            <InputMask
+              type="text"
+              name="cpf"
+              mask="999.999.999-99"
+              pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+              required
+              className="form-control form-layout"
+              id="cpf"
+              name="cpf"
+              placeholder="xxx.xxx.xxx-xx"
+              onChange={(e) => {
+                setCpf(e.target.value);
+              }}
+            />
+            {/* E-mail's imput */}
+            <label className="form-names-layout" htmlFor="email">
+              E-mail
+            </label>
+            <input
+              type="email"
+              required
+              className="form-control form-layout"
+              id="email"
+              name="email"
+              placeholder="Insira seu e-mail"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+            {/* Password's input */}
+            <label className="form-names-layout" htmlFor="password">
+              Senha
+            </label>
+            <input
+              type="password"
+              required
+              className="form-control form-layout"
+              id="password"
+              name="password"
+              placeholder="Insira a sua senha"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+            {/* add picture requisitation place */}
+            <label className="form-names-layout" htmlFor="file">
+              Foto de perfil
+            </label>
+            <input
+              type="file"
+              required
+              className="form-control form-layout"
+              accept=".jpg"
+              id="file"
+              name="file"
+              onChange={(e) => {
+                setFile(e.target.files[0]);
+              }}
+            />
+          </div>
+          {/* Button to register*/}
+          <div
+            className="mx-auto col-12 col-md-6 text-center"
+            style={{ maxWidth: 200 }}
+          >
+            <button
+              className="btn-registrarion btn-custom waves-btn waves-effect mt-3"
+              type="submit"
+            >
+              Cadastrar-se
+            </button>
           </div>
         </div>
-
-        {/* User information form */}
-        <form onSubmit={handleSubmit} encType="multipart/form-data">
-          <div className="container registration-body">
-            <div className="form-group mt-5">
-              <label className="form-names-layout" htmlFor="name">
-                Nome Completo
-              </label>
-              {/* Full name's input */}
-              <input
-                type="name"
-                required
-                className="form-control form-layout"
-                id="name"
-                name="name"
-                placeholder="Insira seu nome completo"
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-              />
-              {/* CPF's input */}
-              <label className="form-names-layout" htmlFor="cpf">
-                CPF
-              </label>
-              <InputMask
-                type="text"
-                name="cpf"
-                mask="999.999.999-99"
-                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-                required
-                className="form-control form-layout"
-                id="cpf"
-                name="cpf"
-                placeholder="xxx.xxx.xxx-xx"
-                onChange={(e) => {
-                  setCpf(e.target.value);
-                }}
-              />
-              {/* E-mail's imput */}
-              <label className="form-names-layout" htmlFor="email">
-                E-mail
-              </label>
-              <input
-                type="email"
-                required
-                className="form-control form-layout"
-                id="email"
-                name="email"
-                placeholder="Insira seu e-mail"
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-              />
-              {/* Password's input */}
-              <label className="form-names-layout" htmlFor="password">
-                Senha
-              </label>
-              <input
-                type="password"
-                required
-                className="form-control form-layout"
-                id="password"
-                name="password"
-                placeholder="Insira a sua senha"
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-              />
-              {/* add picture requisitation place */}
-              <label className="form-names-layout" htmlFor="file">
-                Foto de perfil
-              </label>
-              <input
-                type="file"
-                required
-                className="form-control form-layout"
-                accept=".jpg"
-                id="file"
-                name="file"
-                onChange={(e) => {
-                  setFile(e.target.files[0]);
-                }}
-              />
-            </div>
-            {/* Button to register*/}
-            <div
-              className="mx-auto col-12 col-md-6 text-center"
-              style={{ maxWidth: 200 }}
-            >
-              <button
-                className="btn btn-custom waves-btn waves-effect mt-3"
-                type="submit"
-              >
-                Cadastrar-se
-              </button>
-            </div>
-            {/* Button to go back */}
-            <div className="back-button" style={{ maxWidth: 200 }}>
-              <a
-                className="btn btn-custom waves-btn waves-effect mt-3"
-                href="/login"
-              >
-                Voltar
-              </a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+      </form>
+    </>
   );
 }

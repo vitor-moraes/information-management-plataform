@@ -28,10 +28,9 @@ body {
 }
 
 .shadow {
-  
 }
 
-.vertical-line{
+.vertical-line {
   display: flex;
   width: 1px;
   height: 300px;
@@ -65,25 +64,47 @@ body {
 }
 
 .registration-header {
-  margin-top: 50px;
+  position: relative;
+  margin-top: 30px;
   text-align: center;
-  background-color: rgba(211, 211, 211, 0.712) 211, 211, 0.795);
-}
-.registration-body {
-  margin-top: 10px;
-  background-color: lightgray;
 }
 
-.form-layout{
+.logo-mind {
+  margin-top: 120px;
+  margin-left: 130px;
+}
+
+.registration-body {
+  margin-top: 10px;
+  /* background-color: rgba(252, 252, 252, 0.76); */
+  height: 388px;
+}
+
+.vertical-line-taller {
+  display: flex;
+  width: 1px;
+  height: 410px;
+  border: 1px #bbb solid;
+  margin: 30px 10px;
+}
+
+.form-layout {
   text-align: left;
   margin-top: 1px;
   margin-bottom: 1px;
   height: 45px;
 }
+.btn-registrarion {
+  margin-left: 1px;
+}
 
-.form-names-layout{
+.form-body {
+  margin-left: 25px;
+}
+
+.form-names-layout {
   text-align: left;
-  margin-top: 1px;
+  margin-top: 4px;
   margin-bottom: 1px;
 }
 
@@ -93,7 +114,8 @@ body {
 }
 
 .back-button {
-  margin-left: 153px;
+  margin-top: 25px;
+  margin-left: 330px;
   text-align: center;
 }
 
@@ -125,7 +147,7 @@ body {
   margin: auto;
 }
 
-.back-admin-button{
+.back-admin-button {
   position: absolute;
   margin-bottom: 30px;
   margin-left: 575px;
