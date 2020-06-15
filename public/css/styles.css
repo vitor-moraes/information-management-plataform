@@ -16,6 +16,29 @@ body {
   right: 0;
 }
 
+.montain-bear-logo {
+  margin-top: 90px;
+}
+
+.logo-big {
+  margin-top: 10px;
+}
+
+.logo-small {
+}
+
+.shadow {
+  
+}
+
+.vertical-line{
+  display: flex;
+  width: 1px;
+  height: 300px;
+  border: 1px #bbb solid;
+  margin: 30px 10px;
+}
+
 .btn-custom {
   margin-left: 100px;
   margin: 15px;

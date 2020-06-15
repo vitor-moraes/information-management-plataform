@@ -24,23 +24,17 @@ export default function LoginForm() {
 
   return (
     <div className="container">
-      <div className="text-center">
-        <h3>Faça Seu Login!</h3>
-        <p>
-          Entre em nosso sistema para ter acesso as informações de interesse!
-        </p>
-      </div>
       <form method="POST">
         <div className="form-group mt-5">
           <div className="mt-3">
-            <label htmlFor="login">CPF / E-mail</label>
+            <label htmlFor="login">E-mail</label>
             <input
               type="text"
               required
               className="form-control"
               id="login"
               name="login"
-              placeholder="Insira seu CPF ou E-mail"
+              placeholder="Insira seu E-mail"
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
@@ -73,6 +67,7 @@ export default function LoginForm() {
           <div className="mt-3 text-center">
             <p>
               Não possui uma conta?
+              <br />
               <a className="register-link ml-1" href="/cadastro">
                 cadastre-se aqui.
               </a>
