@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AdminUser from "../components/AdminUser";
 
 export default function AdminDashboard() {
+  useEffect(() => {
+    window.document.title = "Admin Dashboard";
+  }, []);
   return (
     <>
       <AdminUser />

@@ -37,7 +37,7 @@ export default function RegistrationPage() {
       <div className="card">
         <div classname="row">
           <div className="registration-header">
-            <h3>Cadastre-se abaixo!</h3>
+            <h3 className="text-danger">Cadastre-se abaixo!</h3>
             <p>Não demora nem um minuto ;)</p>
           </div>
         </div>
@@ -133,7 +133,7 @@ export default function RegistrationPage() {
                 className="btn btn-custom waves-btn waves-effect mt-3"
                 type="submit"
               >
-                Entrar
+                Cadastrar-se
               </button>
             </div>
             {/* Button to go back */}

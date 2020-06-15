@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function DisabledUser() {
+  useEffect(() => {
+    window.document.title = "DESATIVADA";
+  }, []);
   return (
     <div className="container mt-5">
       <div className="card centralize">

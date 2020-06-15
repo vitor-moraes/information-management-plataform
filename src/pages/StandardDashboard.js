@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import StandardUser from "../components/StandardUser";
 
 export default function StandardDashboard() {
+  useEffect(() => {
+    window.document.title = "Site";
+  }, []);
   return (
     <>
       <StandardUser />

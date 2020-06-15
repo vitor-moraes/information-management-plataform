@@ -52,7 +52,10 @@ export default function AdminUser() {
                     </div>
                     <div className="col-sm-4">
                       <button className="btn-admin-custom">Editar</button>
-                      <button className="btn-admin-custom">Mudar Acesso</button>
+                      <button className="btn-admin-custom">
+                        Ativar/Desativar
+                      </button>
+                      <button className="btn-admin-custom">Deletar</button>
                     </div>
                   </div>
                 </div>

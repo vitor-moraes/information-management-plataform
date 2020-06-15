@@ -78,8 +78,8 @@ body {
 }
 
 .btn-admin-custom {
-  margin-top: 35px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 3px;
   border: 1px solid #ff2837;
   background-color: #333333;
   color: #f2f5f7;
@@ -89,7 +89,7 @@ body {
 }
 
 .btn-admin-custom:hover {
-  background-color: #333333;
+  background-color: #666666;
   color: #f2f5f7;
   box-shadow: 3px 3px #ff2837;
 }
