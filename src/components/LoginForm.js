@@ -15,6 +15,7 @@ export default function LoginForm() {
       login(response.data.token);
       const dataUser = await api.get("users/getByEmail/" + email);
       localStorage.setItem("acesso", dataUser.data.access);
+      localStorage.setItem("id", dataUser.data.id);
       window.location.href = "/home";
     } catch (error) {
       console.log(error);
@@ -29,7 +30,7 @@ export default function LoginForm() {
           Entre em nosso sistema para ter acesso as informações de interesse!
         </p>
       </div>
-      <form>
+      <form method="POST">
         <div className="form-group mt-5">
           <div className="mt-3">
             <label htmlFor="login">CPF / E-mail</label>
@@ -62,7 +63,7 @@ export default function LoginForm() {
           </div>
           <div className="mx-auto text-center" style={{ maxWidth: 200 }}>
             <button
-              type="button"
+              type="submit"
               onClick={handleSubmit}
               className="btn btn-custom waves-btn waves-effect mt-3"
             >

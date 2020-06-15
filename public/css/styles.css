@@ -17,6 +17,8 @@ body {
 }
 
 .btn-custom {
+  margin-left: 100px;
+  margin: 15px;
   border: 1px solid #ff2837;
   background-color: #ff2837;
   color: #f2f5f7;
@@ -78,7 +80,7 @@ body {
 }
 
 .btn-admin-custom {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 3px;
   border: 1px solid #ff2837;
   background-color: #333333;

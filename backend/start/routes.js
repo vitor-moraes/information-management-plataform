@@ -11,4 +11,5 @@ Route.group(() => {
   Route.get("deleteUser/:id", "UserController.deleteUser");
   Route.post("edit/:id", "UserController.edit");
   Route.get("getByEmail/:email", "UserController.getByEmail");
+  Route.post("changeAccesses/:id", "UserController.changeAccesses");
 }).prefix("users");

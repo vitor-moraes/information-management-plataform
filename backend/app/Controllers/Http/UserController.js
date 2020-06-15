@@ -47,6 +47,12 @@ class UserController {
     User.delete(params.id);
   }
 
+  async changeAccesses({ request, response, params }) {
+    const data = request.only(["access"]);
+    const resp = Database.table("users").where("id", params.id).update(data);
+    return resp;
+  }
+
   async edit({ request, response, params }) {
     let data = request.all();
     const image = request.file("fileImage", {
