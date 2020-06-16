@@ -8,7 +8,8 @@ export default function LoginForm() {
   const [password, setPassword] = useState(null);
   const [cpf, setCpf] = useState(null);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       const response = await api.post("/users/login", { email, password });
       console.log(response);
