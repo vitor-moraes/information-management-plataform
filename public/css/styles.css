@@ -138,6 +138,23 @@ body {
   border-radius: 10px;
   border-color: #333333;
 }
+.info-admin {
+  margin-bottom: 10px;
+  margin-top: 22px;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #333333;
+}
+
+.aligh-btn-admin {
+  margin-left: 37px;
+}
+
+.btn-in-admin {
+  margin-left: 110px;
+  margin-top: 20px;
+}
 
 .user-edit-btn {
   margin-left: 0px;
@@ -146,6 +163,7 @@ body {
 .image-user {
   margin-left: 135px;
   margin-top: 40px;
+  margin-bottom: 40px;
   border-width: 3px;
   border-style: solid;
   border-radius: 10px;
@@ -163,7 +181,16 @@ body {
   margin-left: 10px;
 }
 
+.admin-dashbord {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .btn-admin-custom {
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 8px;
+  border-color: #333333;
   margin-top: 10px;
   margin-bottom: 3px;
   border: 1px solid #ff2837;

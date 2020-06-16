@@ -72,7 +72,7 @@ export default function AdminUser() {
                         alt="profileImage"
                       ></img>
                     </div>
-                    <div className="col-sm-4">
+                    <div className="col-sm-3 info-admin">
                       <p className="user-info">
                         <strong>Nome: </strong>
                         {user.name}
@@ -92,79 +92,81 @@ export default function AdminUser() {
                         {user.access === 0 && "DESATIVADO"}
                       </p>
                     </div>
-                    <div className="col-sm-4">
-                      {/* Admin User */}
-                      {user.access === 999 && (
-                        <div>
-                          {" "}
-                          <button
-                            className="btn-admin-custom"
-                            type="button"
-                            onClick={() => disableUser(user.id)}
-                          >
-                            Desativar
-                          </button>
-                          <button
-                            className="btn-admin-custom"
-                            type="button"
-                            onClick={() => standardUser(user.id)}
-                          >
-                            Tornar Comum
-                          </button>
-                          <button
-                            className="btn-admin-custom"
-                            type="button"
-                            onClick={() => deleteUser(user.id)}
-                          >
-                            Deletar
-                          </button>
-                        </div>
-                      )}
-                      {/* Standard User */}
-                      {user.access === 1 && (
-                        <div>
-                          <button
-                            className="btn-admin-custom"
-                            type="button"
-                            onClick={() => disableUser(user.id)}
-                          >
-                            Desativar
-                          </button>
-                          <button
-                            className="btn-admin-custom"
-                            type="button"
-                            onClick={() => adminUser(user.id)}
-                          >
-                            Tornar admin
-                          </button>
-                          <button
-                            className="btn-admin-custom"
-                            type="button"
-                            onClick={() => deleteUser(user.id)}
-                          >
-                            Deletar
-                          </button>
-                        </div>
-                      )}
-                      {/* Disabled User */}
-                      {user.access === 0 && (
-                        <div>
-                          <button
-                            className="btn-admin-custom"
-                            type="button"
-                            onClick={() => standardUser(user.id)}
-                          >
-                            Ativar
-                          </button>
-                          <button
-                            className="btn-admin-custom"
-                            type="button"
-                            onClick={() => deleteUser(user.id)}
-                          >
-                            Deletar
-                          </button>
-                        </div>
-                      )}
+                    <div className="col-12 col-md-3 btn-in-admin image-user">
+                      <div className="aligh-btn-admin">
+                        {/* Admin User */}
+                        {user.access === 999 && (
+                          <div>
+                            {" "}
+                            <button
+                              className="btn-admin-custom"
+                              type="button"
+                              onClick={() => disableUser(user.id)}
+                            >
+                              Desativar
+                            </button>
+                            <button
+                              className="btn-admin-custom"
+                              type="button"
+                              onClick={() => standardUser(user.id)}
+                            >
+                              Tornar Comum
+                            </button>
+                            <button
+                              className="btn-admin-custom"
+                              type="button"
+                              onClick={() => deleteUser(user.id)}
+                            >
+                              Deletar
+                            </button>
+                          </div>
+                        )}
+                        {/* Standard User */}
+                        {user.access === 1 && (
+                          <div>
+                            <button
+                              className="btn-admin-custom"
+                              type="button"
+                              onClick={() => disableUser(user.id)}
+                            >
+                              Desativar
+                            </button>
+                            <button
+                              className="btn-admin-custom"
+                              type="button"
+                              onClick={() => adminUser(user.id)}
+                            >
+                              Tornar admin
+                            </button>
+                            <button
+                              className="btn-admin-custom"
+                              type="button"
+                              onClick={() => deleteUser(user.id)}
+                            >
+                              Deletar
+                            </button>
+                          </div>
+                        )}
+                        {/* Disabled User */}
+                        {user.access === 0 && (
+                          <div>
+                            <button
+                              className="btn-admin-custom"
+                              type="button"
+                              onClick={() => standardUser(user.id)}
+                            >
+                              Ativar
+                            </button>
+                            <button
+                              className="btn-admin-custom"
+                              type="button"
+                              onClick={() => deleteUser(user.id)}
+                            >
+                              Deletar
+                            </button>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
