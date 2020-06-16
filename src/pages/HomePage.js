@@ -8,7 +8,7 @@ import DisabledUser from "./DisabledUser";
 export default function HomePage() {
   useEffect(() => {
     console.log(localStorage.getItem("acesso"));
-    if (!isAuthenticated()) {
+    if (!localStorage.getItem("acesso")) {
       window.location.href = "/login";
     }
   }, []);

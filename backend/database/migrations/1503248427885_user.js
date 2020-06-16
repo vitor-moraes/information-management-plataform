@@ -12,6 +12,7 @@ class UserSchema extends Schema {
       table.string("password", 60).notNullable();
       table.string("cpf", 80).notNullable();
       table.integer("access").notNullable();
+      table.string("img_path", 50).notNullable();
       table.timestamps();
     });
   }
